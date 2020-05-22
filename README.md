@@ -21,5 +21,5 @@
 * [Github Pull Request, Branching, Merging & Team Workflow](https://www.youtube.com/watch?v=oFYyTZwMyAg)
 
 ## Join the team:
-* **[Trello]**(https://trello.com/lintonietoncampus)
-* **[Github]**(https://github.com/Linton-IET-On-Campus)
+* [Trello](https://trello.com/lintonietoncampus)
+* [Github](https://github.com/Linton-IET-On-Campus)
