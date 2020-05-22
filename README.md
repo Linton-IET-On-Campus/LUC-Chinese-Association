@@ -1,5 +1,5 @@
 # 林登华文学会 Official Website
-这个 website 主要是提供 LUC Chinese Association member 资讯
+这个 website 主要是提供 LUC Chinese Association member 资讯 和 外校资讯。我希望未来可以把它 expand 想 facebook 那样的 社交媒体
 
 ## Programming Language Used:
 * Javascript
