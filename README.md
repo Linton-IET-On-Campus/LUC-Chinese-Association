@@ -19,7 +19,30 @@
 * [Intro to jQuery](https://classroom.udacity.com/courses/ud245)
 * [Intro to Backend](https://classroom.udacity.com/courses/ud171)
 * [Github Pull Request, Branching, Merging & Team Workflow](https://www.youtube.com/watch?v=oFYyTZwMyAg)
+* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Join the team:
 * [Trello](https://trello.com/lintonietoncampus)
 * [Github](https://github.com/Linton-IET-On-Campus)
+* [Online Video Call](https://gobrunch.com/programming_with_Hovah)
+
+### Github Checking Command Line
+```
+ git log
+ git diff
+ git fetch
+ git status
+```
+
+### Github Commit Command
+```
+git add file name
+git commit
+git push origin file name
+```
+
+### Git Branch Command
+```
+git branch your brancch name
+git checkout your branch name 
+```
