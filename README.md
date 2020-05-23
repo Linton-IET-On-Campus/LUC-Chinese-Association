@@ -26,23 +26,45 @@
 * [Github](https://github.com/Linton-IET-On-Campus)
 * [Online Video Call](https://gobrunch.com/programming_with_Hovah)
 
+## Github
+
 ### Github Checking Command Line
+
+* git status
 ```
- git log
- git diff
- git fetch
- git status
+On branch hovah
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
 ```
 
 ### Github Commit Command
+* git commit
+[How To Write Proper Git Commit Messages](https://medium.com/@steveamaza/how-to-write-a-proper-git-commit-message-e028865e5791)
+[Udacity Git Commit Message Style Guide](http://udacity.github.io/git-styleguide/)
+* git commit -m "message" 
+
+### Commit all changes
 ```
-git add file name
+git add [file name]
+git status
 git commit
 git push origin file name
 ```
 
 ### Git Branch Command
 ```
-git branch your brancch name
-git checkout your branch name 
+git branch [your brancch name]
+git checkout [your branch name]
 ```
+
+### git merge
+```
+git merge master [branch name]
+```
+
