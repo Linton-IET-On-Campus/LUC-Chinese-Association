@@ -45,8 +45,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ### Github Commit Command
 * git commit
-[How To Write Proper Git Commit Messages](https://medium.com/@steveamaza/how-to-write-a-proper-git-commit-message-e028865e5791)
-[Udacity Git Commit Message Style Guide](http://udacity.github.io/git-styleguide/)
+1. [How To Write Proper Git Commit Messages](https://medium.com/@steveamaza/how-to-write-a-proper-git-commit-message-e028865e5791)
+2. [Udacity Git Commit Message Style Guide](http://udacity.github.io/git-styleguide/)
 * git commit -m "message" 
 
 ### Commit all changes
