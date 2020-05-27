@@ -21,6 +21,8 @@
 * [Github Pull Request, Branching, Merging & Team Workflow](https://www.youtube.com/watch?v=oFYyTZwMyAg)
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * [Writing READMEs](https://classroom.udacity.com/courses/ud777)
+* [Object Oriented Programming in Java](https://classroom.udacity.com/courses/ud283)
+
 
 ## Join the team:
 * [Trello](https://trello.com/lintonietoncampus)
