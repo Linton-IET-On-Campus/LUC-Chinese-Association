@@ -1,0 +1,64 @@
+.inner_main_menu ul{
+  margin:0 auto; 
+  width:100%;
+  height:50px;
+}
+
+.inner_main_menu ul{
+  margin: 0; 
+  padding:0; 
+  list-style:none; 
+  text-align:right;
+  background-color:white;
+}
+
+.inner_main_menu ul li{
+  float:none; 
+  display:inline-block;
+}
+
+.inner_main_menu ul li:nth-child(1){
+  float:left;
+}
+
+.inner_main_menu ul li:nth-child(2){
+  float:left;
+}
+
+.inner_main_menu ul li a{
+  color:#262626; 
+  font-size:30px;
+  font-family:'Ma Shan Zheng', cursive; 
+  text-transform:uppercase; 
+  text-decoration:none;
+  display:block;
+  padding:10px 60px;
+  padding-top:5px;
+}
+
+.inner_main_menu ul li a:hover{
+  color:grey;
+}
+
+#main_menu{
+  width:100%; 
+  position:relative;
+}
+
+.logo_area{
+  width:300px;
+  height:100px;
+  position:relative;
+  left:45%;
+  content:"";
+}
+
+nav{
+  position: fixed;
+  background-color:white;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100px;
+}
