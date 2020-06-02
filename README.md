@@ -31,7 +31,7 @@
 
 ## Github
 A good coure to follow:
- [CS50's Web Programming with Python and JavaScript](https://www.youtube.com/playlist?list=PLhQjrBD2T382hIW-IsOVuXP1uMzEvmcE5)
+* [CS50's Web Programming with Python and JavaScript](https://www.youtube.com/playlist?list=PLhQjrBD2T382hIW-IsOVuXP1uMzEvmcE5)
 
 ### Github Checking Command Line
 
@@ -59,8 +59,11 @@ no changes added to commit (use "git add" and/or "git commit -a")
 git add [file name]
 git status
 git commit
-git push origin file name
+git push origin [branch name]
 ```
+
+### Merge Conflict
+[Resolving Merge Conflicts](https://www.youtube.com/watch?v=iRyUUGsNHrU)
 
 ### Git Branch Command
 ```
@@ -71,5 +74,11 @@ git checkout [your branch name]
 ### git merge
 ```
 git merge master [branch name]
+```
+
+### git reset
+```
+git reset --hard [commit]
+git reset --hard origin/master
 ```
 
