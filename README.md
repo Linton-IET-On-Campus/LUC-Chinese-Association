@@ -23,7 +23,6 @@
 * [Writing READMEs](https://classroom.udacity.com/courses/ud777)
 * [Object Oriented Programming in Java](https://classroom.udacity.com/courses/ud283)
 
-
 ## Join the team:
 * [Trello](https://trello.com/lintonietoncampus)
 * [Github](https://github.com/Linton-IET-On-Campus)
