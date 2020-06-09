@@ -29,7 +29,7 @@
 * [Online Video Call](https://gobrunch.com/programming_with_Hovah)
 
 ## Github
-A good coure to follow:
+A good course to follow:
 * [CS50's Web Programming with Python and JavaScript](https://www.youtube.com/playlist?list=PLhQjrBD2T382hIW-IsOVuXP1uMzEvmcE5)
 
 ### Github Checking Command Line
