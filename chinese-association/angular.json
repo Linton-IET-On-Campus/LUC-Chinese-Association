@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "chinese-association"
+    }
+  },
+  "defaultProject": "chinese-association",
+  "cli": {
+    "analytics": "fe411186-dbf8-432a-b12d-9fb5ca6a894d"
+  }
 }
