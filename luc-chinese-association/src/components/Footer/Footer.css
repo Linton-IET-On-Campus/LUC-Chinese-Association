@@ -1,0 +1,12 @@
+footer{
+    bottom: 0;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+ul li{
+    text-align: center;
+    list-style-type:none;
+    display: inline;
+}
