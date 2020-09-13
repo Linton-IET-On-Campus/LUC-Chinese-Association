@@ -12,7 +12,7 @@ class Slider extends Component{
 
     render() {
         return(
-            <AutoplaySlider
+          <AutoplaySlider
             play={true}
             cancelOnInteraction={false} // should stop playing on user interaction
             interval={6000}
