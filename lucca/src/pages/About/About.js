@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import "./AboutUs.css";
+import "./About.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Team from "../../components/Team/Team";
 import Footer from "../../components/Footer/Footer";
 
-export default class AboutUs extends Component {
+export default class About extends Component {
  render(){
         return(
             <div className="container">
