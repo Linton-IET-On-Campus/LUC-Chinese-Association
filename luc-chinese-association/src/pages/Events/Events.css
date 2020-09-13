@@ -1,0 +1,9 @@
+hr{
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+br {
+    margin: 40px;
+}

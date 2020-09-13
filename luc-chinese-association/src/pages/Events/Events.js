@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import "./Events.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Slider from "../../components/Slider/Slider";
 import EventCard from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
-import { Container, Row, Col } from 'reactstrap';
 
-class Events extends Component {
+export default class Events extends Component {
  render(){
         return(
             <div className="container">
                 <Navbar />
                 <Slider />
                 <br />
-                <br />
                 <Container fluid>
-                    <Row sm="4">
+                    <Row sm="3">
                         <Col>
                             <EventCard />
                         </Col>
@@ -28,4 +28,3 @@ class Events extends Component {
     }
 }
 
-export default Events;

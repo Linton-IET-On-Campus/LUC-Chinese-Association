@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import { ReactNavbar} from "react-responsive-animate-navbar";
 import "./Navbar.css";
+import logo from "../../assets/img/logo192.png";
 
 class Navbar extends Component{
     render() {
         return(
             <ReactNavbar
-            color="rgb(25, 25, 25)"
-            logo="https://svgshare.com/i/KHh.svg"
+            color="rgba(0, 0, 0, 50)"
+            logo={logo} 
             menu={[
-              { name: "🗓️ 外校活动", to: "/" },
-              { name: "✍️ Blog", to: "/blog" },
-              { name: "🤑 友情赞助", to: "/donate-us" },
-              { name: "📌 关于我们", to: "/about-us" },
+              { name: "🗓️ 外校活动",  to: "/"},
+              { name: "✍️ 博客", to: "/blog" },
+              { name: "🤑 友情赞助", to: "/donate" },
+              { name: "📌 关于我们", to: "/about" },
               { name: "🛒 商店", to: "/shop" },
               { name: "🔒 登录", to: "/login" },
             ]}
+            
             social={[
               {
                 name: "Facebook",
@@ -34,8 +36,9 @@ class Navbar extends Component{
               },
             ]}
           />
+
         );
     }
 }
 
-export default Navbar
+export default Navbar;

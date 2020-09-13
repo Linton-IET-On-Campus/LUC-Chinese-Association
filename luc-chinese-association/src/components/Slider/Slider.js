@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import slide from '../../assets/img/about-bg.jpg'
 
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
+
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -15,12 +17,12 @@ class Slider extends Component{
             cancelOnInteraction={false} // should stop playing on user interaction
             interval={6000}
           >
-            <div data-src="/path/to/image-0.png" />
-            <div data-src="/path/to/image-1.png" />
-            <div data-src="/path/to/image-2.jpg" />
+            <div data-src={slide} />
+            <div data-src={slide} />
+            <div data-src={slide} />
           </AutoplaySlider>
         )
     }
 }
 
-export default Slider
+export default Slider;
