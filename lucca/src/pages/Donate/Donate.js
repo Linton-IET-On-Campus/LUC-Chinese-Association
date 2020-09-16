@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import "./Donate.css";
+import { Alert } from 'reactstrap';
+
+import EventCard from "../../components/Card/Card";
+ 
 
 class Donate extends Component {
     constructor(props) {
@@ -8,7 +12,10 @@ class Donate extends Component {
   
     render() {
       return (
-       <div>Hello World</div>
+        <body>
+          <Alert class="a1" color="primary">This is a primary alert — check it out!</Alert>
+          <EventCard />
+       </body>
       );
     }
   }
