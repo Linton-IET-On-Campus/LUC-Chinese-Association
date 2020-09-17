@@ -1,13 +1,11 @@
 import React from 'react';
-import { Button, CardTitle, Container
+import { Button, CardTitle 
 } from 'reactstrap';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import "./Login.css";
+
+import { Container} from 'reactstrap';
 import logo from "../../assets/img/logo192.png";
 
-
-
-const Login = (props) => {
+const Admin = (props) => {
   return (
       <Container>
           <img src={logo}></img>
@@ -15,13 +13,9 @@ const Login = (props) => {
           <Button color="primary" size="lg">管理员</Button>{''}
           <Button color="primary" size="lg">会员</Button>{''}
           <Button color="primary" size="lg">外校</Button>{''}
-          
-
       </Container>
-
-
 
   );
 };
 
-export default Login;
+export default Admin;
