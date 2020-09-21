@@ -3,7 +3,7 @@ import {
   Card,  CardImg
 } from 'reactstrap';
 import "./Login.css";
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row} from 'reactstrap';
 import logo from "../../assets/img/logo192.png"
 
 const Login = (props) => {

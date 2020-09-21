@@ -1,7 +1,3 @@
-.box {
-    display: flex;
-}
-
 .card{
     width: 20vw;
     margin: 20px;
@@ -24,5 +20,4 @@
 
 .card-text{
     margin: 5px;
-    
 }

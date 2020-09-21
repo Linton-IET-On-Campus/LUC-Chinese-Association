@@ -7,7 +7,7 @@ import './Card.css';
 
 const EventCard = (props) => {
   return (
-    <div>
+    <div className="box">
       <Card>
         <CardImg top width="100%" src="https://reactstrap.github.io/assets/318x180.svg" alt="Card image cap" />
         <CardBody>
