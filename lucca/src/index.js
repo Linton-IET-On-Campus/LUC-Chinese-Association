@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+<<<<<<< HEAD
+=======
+import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.css';
+>>>>>>> b3fe78c347f0eb0039353be6877918dd914be721
 
 ReactDOM.render(
     <App />,

@@ -8,6 +8,12 @@ import About from "./pages/About/About";
 import Shop from "./pages/Shop/Shop";
 import Login from "./pages/Login/Login";
 
+// Dashboard
+import Admin from "./dashboard/admin/Admin";
+import Member from "./dashboard/member/Member";
+import OtherUni from "./dashboard/otheruni/OtherUni";
+
+
 function App() {
     return (
         <Router>
@@ -18,6 +24,11 @@ function App() {
             <Route path="/about" component={About} />  
             <Route path="/shop" component={Shop} />  
             <Route path="/login" component={Login} />  
+
+            <Route path="/admin" component={Admin} />  
+            <Route path="/member" component={Member} />  
+            <Route path="/otheruni" component={OtherUni} />  
+
 
         </Router>
     );
