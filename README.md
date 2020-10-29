@@ -1,6 +1,6 @@
 # <div align="center">LUC Chinese Association Official Website</div> 
 
-![](https://img.shields.io/badge/Status-Completed-red?style=for-the-badge)
+![](https://img.shields.io/badge/Status-Ongoing-green?style=for-the-badge)
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W61L27Z)
 
 <br/>
