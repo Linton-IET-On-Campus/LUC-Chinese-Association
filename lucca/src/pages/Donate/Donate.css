@@ -1,3 +1,62 @@
+<<<<<<< HEAD
 .a1{
     color: red !important;
 }
+=======
+.container1 {
+    text-align: center;
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #72cca7;
+    border-radius: 5px;
+}
+
+input[type=text],[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+#pic1 {
+    position: inherit;
+    float: left;
+    border-radius: 50%;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+ }
+
+hr.new {
+    border: 1px solid white;
+}
+
+#left head {
+    min-width: 50%;
+    float: left;
+    padding-left: 20px;
+}
+
+button{
+    background-color: #10a195;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s;
+}
+
+.sec-3{
+    display: flex;
+}
+
+>>>>>>> 11a552e70fae89b37fcb5621ff480ed320aebc54
