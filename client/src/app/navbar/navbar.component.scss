@@ -1,8 +1,4 @@
-.container{
-  margin-top: 30px;
-  overflow: hidden;
-  width: 100vw;
-}
+
 
 .blog-header {
   line-height: 1;
@@ -21,4 +17,16 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 .nav-scroller{
   font-size: large;
   font-weight: 700;
+}
+
+.fa-facebook, .fa-facebook-square {
+  color: #3b5998
+}
+
+.fa.fa-instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }

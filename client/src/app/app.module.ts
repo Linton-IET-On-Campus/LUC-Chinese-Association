@@ -13,13 +13,20 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatTooltipModule} from '@angular/material/tooltip'; 
 
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { CommitteeComponent } from './committee/committee.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    JumbotronComponent,
+    CommitteeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,9 @@ import { MatListModule } from '@angular/material/list';
     LayoutModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
