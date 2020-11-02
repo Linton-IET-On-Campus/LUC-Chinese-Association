@@ -3,12 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { iCommittee } from './committee';
 import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CommitteeService {
 
-  private _url: string = "/assets/data/committee.json";
+  private _url: string = "/assets/data/committees.json";
 
   constructor(private http: HttpClient) { }
 

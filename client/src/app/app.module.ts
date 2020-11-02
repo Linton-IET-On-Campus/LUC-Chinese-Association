@@ -19,6 +19,7 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { CommitteeComponent } from './committee/committee.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { CommitteeService } from './committee/committee.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatTooltipModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CommitteeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
