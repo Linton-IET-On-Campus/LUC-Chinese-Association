@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+section {
+    overflow: hidden;
+  }
+  
+  /* Sections Header
+  --------------------------------*/
+  .section-header h3 {
+    font-size: 36px;
+    color: #413e66;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .section-header p {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #535074;
+    width: 50%;
+  }
+  
+  @media (max-width: 767px) {
+    .section-header p {
+      width: 100%;
+    }
+  }
+  
+
+/* Team Section
+--------------------------------*/
+#team {
+    padding: 60px 0;
+  }
+  
+  #team .member {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #team .member .member-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.2s;
+    padding: 15px 0;
+    background: rgba(29, 28, 41, 0.6);
+  }
+  
+  #team .member .member-info-content {
+    transition: margin 0.2s;
+    height: 40px;
+    transition: height 0.4s;
+  }
+  
+  #team .member:hover .member-info {
+    transition: 0.4s;
+  }
+  
+  #team .member:hover .member-info-content {
+    height: 80px;
+  }
+  
+  #team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  #team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+    color: #fff;
+  }
+  
+  #team .member .social {
+    margin-top: 15px;
+  }
+  
+  #team .member .social a {
+    transition: none;
+    color: #fff;
+  }
+  
+  #team .member .social a:hover {
+    color: #1bb1dc;
+  }
+  
+  #team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+  }

@@ -1,0 +1,92 @@
+
+/* Sections Header
+--------------------------------*/
+.section-header .section-title {
+    font-size: 32px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .section-header .section-description {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #999;
+  }
+  
+
+
+/* Services Section
+--------------------------------*/
+#services {
+    background: rgb(235, 235, 235);
+    background-size: cover;
+    padding: 80px 0 60px 0;
+  }
+  
+  #services .box {
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    height: 200px;
+    position: relative;
+    background: #fafafa;
+  }
+  
+  #services .icon {
+    position: absolute;
+    top: -36px;
+    left: calc(50% - 36px);
+    transition: 0.2s;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 72px;
+    height: 72px;
+    background: #2dc997;
+  }
+  
+  #services .icon a {
+    display: inline-block;
+  }
+  
+  #services .icon i {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  #services .box:hover .icon {
+    background: #fff;
+    border: 2px solid #2dc997;
+  }
+  
+  #services .box:hover .icon i {
+    color: #2dc997;
+  }
+  
+  #services .box:hover .icon a {
+    color: #2dc997;
+  }
+  
+  #services .title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  #services .title a {
+    color: #111;
+  }
+  
+  #services .description {
+    font-size: 14px;
+    line-height: 24px;
+  }

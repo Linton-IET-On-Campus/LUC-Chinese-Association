@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "name": "Hovah Yii",
+        "position": "Project Manager + Full Stack Developer",
+        "image": "https://avatars1.githubusercontent.com/u/31881261?s=460&u=a3f427ed49b0dc7aa20718ee4abed877c80299b7&v=4",
+        "github": "https://github.com/hovahyii",
+        "email": "mailto:hovahyii@gmail.com"
+    },
+    {
+        "id": "2",
+        "name": "Jordan Wong Pang Wei",
+        "position": "Front End Developer",
+        "image": "https://avatars1.githubusercontent.com/u/31881261?s=460&u=a3f427ed49b0dc7aa20718ee4abed877c80299b7&v=4",
+        "github": "https://github.com/hovahyii",
+        "email": "mailto:hovahyii@gmail.com"
+    },
+]

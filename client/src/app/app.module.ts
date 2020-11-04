@@ -4,22 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HeaderComponent } from './header/header.component';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 
-import { JumbotronComponent } from './jumbotron/jumbotron.component';
-import { CommitteeComponent } from './committee/committee.component';
-
+import { JumbotronComponent } from './Main/jumbotron/jumbotron.component';
+import { CommitteeComponent } from './Main/committee/committee.component';
+import { NavbarComponent } from './Main/navbar/navbar.component';
+import { HeaderComponent } from './Main/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CommitteeService } from './committee/committee.service';
+import { CommitteeService } from './Main/committee/committee.service';
+import { CreditsComponent } from './Main/credits/credits.component';
+import { CommentsComponent } from './Main/comments/comments.component';
+import { ContactComponent } from './Main/contact/contact.component';
+import { FooterComponent } from './Main/footer/footer.component';
+import { CreditsService } from './Main/credits/credits.service';
 
 @NgModule({
   declarations: [
@@ -27,21 +25,20 @@ import { CommitteeService } from './committee/committee.service';
     NavbarComponent,
     HeaderComponent,
     JumbotronComponent,
-    CommitteeComponent
+    CommitteeComponent,
+    CreditsComponent,
+    CommentsComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    LayoutModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
+
     MatTooltipModule,
     HttpClientModule
   ],
-  providers: [CommitteeService],
+  providers: [CommitteeService, CreditsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
