@@ -7,38 +7,39 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 
-import { JumbotronComponent } from './Main/jumbotron/jumbotron.component';
-import { CommitteeComponent } from './Main/committee/committee.component';
+
 import { NavbarComponent } from './Main/navbar/navbar.component';
 import { HeaderComponent } from './Main/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommitteeService } from './Main/committee/committee.service';
-import { CreditsComponent } from './Main/credits/credits.component';
-import { CommentsComponent } from './Main/comments/comments.component';
-import { ContactComponent } from './Main/contact/contact.component';
 import { FooterComponent } from './Main/footer/footer.component';
 import { CreditsService } from './Main/credits/credits.service';
+import { CommentsService } from './Main/comments/comments.service';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { PageNotFoundComponent } from './Main/page-not-found/page-not-found.component';
+import { DashboardComponent } from './Dashboard/dashboard.component';
+import { DashboardRoutingModule } from './Dashboard/dashboard-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HeaderComponent,
-    JumbotronComponent,
-    CommitteeComponent,
-    CreditsComponent,
-    CommentsComponent,
-    ContactComponent,
-    FooterComponent
+    routingComponents,
+    FooterComponent,
+    PageNotFoundComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-
     MatTooltipModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    DashboardRoutingModule
   ],
-  providers: [CommitteeService, CreditsService],
+  providers: [CommitteeService, CreditsService, CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

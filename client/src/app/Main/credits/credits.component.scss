@@ -32,20 +32,20 @@ section {
   }
   
 
-/* Team Section
+/* credits Section
 --------------------------------*/
-#team {
+#credits {
     padding: 60px 0;
   }
   
-  #team .member {
+  #credits .member {
     text-align: center;
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
   }
   
-  #team .member .member-info {
+  #credits .member .member-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,48 +58,48 @@ section {
     background: rgba(29, 28, 41, 0.6);
   }
   
-  #team .member .member-info-content {
+  #credits .member .member-info-content {
     transition: margin 0.2s;
     height: 40px;
     transition: height 0.4s;
   }
   
-  #team .member:hover .member-info {
+  #credits .member:hover .member-info {
     transition: 0.4s;
   }
   
-  #team .member:hover .member-info-content {
+  #credits .member:hover .member-info-content {
     height: 80px;
   }
   
-  #team .member h4 {
+  #credits .member h4 {
     font-weight: 700;
     margin-bottom: 2px;
     font-size: 18px;
     color: #fff;
   }
   
-  #team .member span {
+  #credits .member span {
     font-style: italic;
     display: block;
     font-size: 13px;
     color: #fff;
   }
   
-  #team .member .social {
+  #credits .member .social {
     margin-top: 15px;
   }
   
-  #team .member .social a {
+  #credits .member .social a {
     transition: none;
     color: #fff;
   }
   
-  #team .member .social a:hover {
+  #credits .member .social a:hover {
     color: #1bb1dc;
   }
   
-  #team .member .social i {
+  #credits .member .social i {
     font-size: 18px;
     margin: 0 2px;
   }

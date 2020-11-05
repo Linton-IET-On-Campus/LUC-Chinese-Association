@@ -1,22 +1,22 @@
  <!-- ======= Team Section ======= -->
- <section id="team" class="team section-bg">
+ <section id="credits" class="credits section-bg">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h3>👨‍💻宅男开发团</h3>
-        <p>玫瑰是红色的，紫罗兰是蓝色的；解开了程序里的 bugs，却解不了妳的心思</p>
+        <h3>👨‍💻 Development Team</h3>
+        <p>Eat ○ Sleep ○ Code ○ Repeat </p>
       </div>
       <div class="row">
 
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div *ngFor="let developer of developers" class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="member">
-            <img src="https://avatars1.githubusercontent.com/u/31881261?s=460&u=a3f427ed49b0dc7aa20718ee4abed877c80299b7&v=4" class="img-fluid" alt="">
+            <img src={{developer.image}} class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>{{developer.name}}</h4>
+                <span>{{developer.position}}</span>
                 <div class="social">
-                  <a href=""><i class="fab fa-github"></i></a>
-                  <a href=""><i class="fas fa-envelope-square"></i></a>
+                  <a href={{developer.github}}><i class="fab fa-github"></i></a>
+                  <a href={{developer.email}}><i class="fas fa-envelope-square"></i></a>
               
                 </div>
               </div>

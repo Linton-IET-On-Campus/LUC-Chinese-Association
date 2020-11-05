@@ -11,8 +11,33 @@
         "id": "2",
         "name": "Jordan Wong Pang Wei",
         "position": "Front End Developer",
-        "image": "https://avatars1.githubusercontent.com/u/31881261?s=460&u=a3f427ed49b0dc7aa20718ee4abed877c80299b7&v=4",
-        "github": "https://github.com/hovahyii",
-        "email": "mailto:hovahyii@gmail.com"
+        "image": "https://github.com/Linton-IET-On-Campus/LUC-Chinese-Association/blob/master/client/src/assets/developer/jordan.jpg?raw=true",
+        "github": "https://github.com/Jordan1910",
+        "email": "mailto:jordan1910@student.ktgeducation.edu.my"
+        
     },
+    {
+        "id": "3",
+        "name": "Muhammad Harris Mohd Idris",
+        "position": "Front End Developer",
+        "image": "https://github.com/Linton-IET-On-Campus/LUC-Chinese-Association/blob/master/client/src/assets/developer/harris.jpg?raw=true",
+        "github": "https://github.com/HARRIS006",
+        "email": "mailto:harrisarceus99@gmail.com" 
+    },
+    {
+        "id": "4",
+        "name": "Lee Kah Hin",
+        "position": "Front End Developer",
+        "image": "https://github.com/Linton-IET-On-Campus/LUC-Chinese-Association/blob/master/client/src/assets/developer/kahhin.jpg?raw=true",
+        "github": "https://github.com/roadslayer",
+        "email": "mailto:kamenrider00791@gmail.com" 
+    },
+    {
+        "id": "5",
+        "name": "Yeo Kai LIang",
+        "position": "Front End Developer",
+        "image": "https://github.com/Linton-IET-On-Campus/LUC-Chinese-Association/blob/master/client/src/assets/developer/kailiang.jpg?raw=true",
+        "github": "https://github.com/YeoKaiLiang",
+        "email": "mailto:yklkailiang@gmail.com" 
+    }
 ]

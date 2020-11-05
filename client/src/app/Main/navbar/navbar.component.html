@@ -2,32 +2,34 @@
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a href="https://www.facebook.com/LUCChineseAssociation" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a> &nbsp;
-        <a href="https://www.instagram.com/chinese.association.linton/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a> &nbsp;
-        <a href="https://hovahyii.github.io/LUC-Chinese-Association-External-Affair/" target="_blank"><i matTooltip="外务部 E-CARD" class="fa fa-id-card fa-2x"></i></a>
+        <a routerLink="https://www.facebook.com/LUCChineseAssociation" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a> &nbsp;
+        <a routerLink="https://www.instagram.com/chinese.association.linton/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a> &nbsp;
+        <a routerLink="https://hovahyii.github.io/LUC-Chinese-Association-External-Affair/" target="_blank"><i matTooltip="外务部 E-CARD" class="fa fa-id-card fa-2x"></i></a>
 
       </div>
       <div class="col-4 text-center">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" routerLink="#">
           <img src="../../assets/logo.png" width="80" height="80" alt="">
         </a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" href="#">
-          🔒 登录</a>
+        <a class="btn btn-sm btn-outline-secondary" routerLink="login" routerLinkActive="active">
+          🔒 登录
+        </a>
       </div>
     </div>
   </header>
 
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-      <a class="p-2 text-muted" href="#">主页</a>
-      <a class="p-2 text-muted" href="#">职员 20/21</a>
-      <a class="p-2 text-muted" href="#">留个言呗</a>
-      <a class="p-2 text-muted" href="#">开发团队</a>
-      <a class="p-2 text-muted" href="#">联络我们</a>
+      <a class="p-2 text-muted" routerLink="about" routerLinkActive="active">主页</a>
+      <a class="p-2 text-muted" routerLink="committees" routerLinkActive="active">职员 20/21</a>
+      <a class="p-2 text-muted" routerLink="comments" routerLinkActive="active">留个言呗</a>
+      <a class="p-2 text-muted" routerLink="credits" routerLinkActive="active">开发团队</a>
+      <a class="p-2 text-muted" routerLink="contact" routerLinkActive="active">联络我们</a>
 
     </nav>
   </div>
 
- 
+
+  <router-outlet></router-outlet>

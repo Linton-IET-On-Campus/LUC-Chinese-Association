@@ -1,15 +1,15 @@
-<!-- ======= Services Section ======= -->
-<section id="services">
+<!-- ======= comments Section ======= -->
+<section id="comments">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
         <h3 class="section-title">留个言呗</h3>
         <p class="section-description">人走茶凉，落得满地荒凉。痴心残忆随君逝，秋风萧瑟入君梦。愿此情，此意随风零落为泥碾，仍相记。  <br/> ✨ 留个祝福/个性签名/座右铭，做个纪念，有缘再见 <br/>✨ 任何渲染色情，暴力，政治，不道德留言将被删除</p>
       </div>
-      <div class="row">
+      <div *ngFor="let comment of comments" class="row">
         <div class="col-lg-4 col-md-6" data-aos="zoom-in">
           <div class="box">
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="">{{comment.name}}</a></h4>
+            <p class="description">{{comment.description}}</p>
           </div>
         </div>
 
@@ -23,4 +23,4 @@
       </div>
 
     </div>
-  </section><!-- End Services Section -->
+  </section><!-- End comments Section -->
