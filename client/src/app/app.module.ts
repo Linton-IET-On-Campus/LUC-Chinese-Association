@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -17,8 +17,8 @@ import { CreditsService } from './Main/credits/credits.service';
 import { CommentsService } from './Main/comments/comments.service';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { PageNotFoundComponent } from './Main/page-not-found/page-not-found.component';
-import { DashboardComponent } from './Dashboard/dashboard.component';
-import { DashboardRoutingModule } from './Dashboard/dashboard-routing.module';
+
+import { DashboardModule } from './Dashboard/dashboard.module';
 
 
 @NgModule({
@@ -29,7 +29,7 @@ import { DashboardRoutingModule } from './Dashboard/dashboard-routing.module';
     routingComponents,
     FooterComponent,
     PageNotFoundComponent,
-    DashboardComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -37,9 +37,10 @@ import { DashboardRoutingModule } from './Dashboard/dashboard-routing.module';
     MatTooltipModule,
     HttpClientModule,
     AppRoutingModule,
-    DashboardRoutingModule
+    DashboardModule
   ],
   providers: [CommitteeService, CreditsService, CommentsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

@@ -1,13 +1,27 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoginComponent } from '../Auth/login/login.component'
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DashboardComponent } from './dashboard.component';
+import { CommentsComponent } from './comments/comments.component';
+import { ContactComponent } from './contact/contact.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
+import { CommitteeComponent } from './committee/committee.component';
+import { DeveloperComponent } from './developer/developer.component';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DashboardComponent,
+    CommentsComponent, 
+    ContactComponent, 
+    SidebarComponent, 
+    HeaderComponent, 
+    CommitteeComponent, 
+    DeveloperComponent,
+  ],
   imports: [
-    CommonModule,
-    LoginComponent
-  ]
+    DashboardRoutingModule,
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class DashboardModule { }
