@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CreditsService {
 
-  private _url: string = "/assets/data/developers.json";
+  private _url: string = "http://localhost:3000/developers";
 
   constructor(private http: HttpClient) { }
 

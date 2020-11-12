@@ -21,6 +21,9 @@ app.use(express.json())
 const committeesRouter = require('./routes/committees')
 app.use('/committees', committeesRouter)
 
+const developersRouter = require('./routes/developers')
+app.use('/developers', developersRouter)
+
 app.listen(PORT , () => {
     console.log(`Server is running on port: ${PORT}`);
 });

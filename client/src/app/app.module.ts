@@ -28,7 +28,6 @@ import { DashboardModule } from './Dashboard/dashboard.module';
     routingComponents,
     FooterComponent,
     PageNotFoundComponent,
-    
   ],
   imports: [
     BrowserModule,

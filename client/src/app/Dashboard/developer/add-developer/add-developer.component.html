@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>添加 👨‍💻 </h2>
+   
+    <form #developerPost="ngForm"  (ngSubmit)="onSubmit(developerPost.value)">
+      <div class="form-group" >
+        <label for="name">名字:</label>
+        <input type="text" class="form-control" id="name" placeholder="君の名字" name="name" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="position">职位:</label>
+        <input type="text" class="form-control" id="position" placeholder="君の职位" name="position" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="image">人头照:</label>
+        <input type="text" class="form-control" id="image" placeholder="君の人头照" name="image" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="github">Github:</label>
+        <input type="text" class="form-control" id="github" placeholder="君のGithub" name="github" ngModel>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">电邮:</label>
+        <input type="text" class="form-control" id="email" placeholder="君の电邮" name="email" ngModel>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>

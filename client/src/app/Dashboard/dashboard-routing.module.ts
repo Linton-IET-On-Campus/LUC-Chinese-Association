@@ -7,6 +7,8 @@ import { AddCommitteeComponent } from '../Dashboard/committee/add-committee/add-
 import { EditCommitteeComponent } from '../Dashboard/committee/edit-committee/edit-committee.component';
 
 import { DeveloperComponent } from '../Dashboard/developer/developer.component';
+import { AddDeveloperComponent } from '../Dashboard/developer/add-developer/add-developer.component';
+import { EditDeveloperComponent } from '../Dashboard/developer/edit-developer/edit-developer.component';
 
 import { CommentsComponent } from '../Dashboard/comments/comments.component';
 
@@ -18,9 +20,12 @@ const routes: Routes = [
 
     { path: 'committees', component: CommitteeComponent },
     { path: 'add-committees', component: AddCommitteeComponent },
-    { path: 'edit/:id', component: EditCommitteeComponent },
+    { path: 'committee/edit/:id', component: EditCommitteeComponent },
 
     { path: 'developers', component: DeveloperComponent },
+    { path: 'add-developers', component: AddDeveloperComponent },
+    { path: 'developer/edit/:id', component: EditDeveloperComponent },
+
     { path: 'comments', component: CommentsComponent },
     { path: 'contact', component: ContactComponent },
   ]},

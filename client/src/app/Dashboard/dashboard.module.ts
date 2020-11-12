@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';  
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditDeveloperComponent } from './developer/edit-developer/edit-developer.component';
+import { AddDeveloperComponent } from './developer/add-developer/add-developer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommitteeComponent, 
     DeveloperComponent, 
     EditCommitteeComponent, 
-    AddCommitteeComponent,
+    AddCommitteeComponent, 
+    EditDeveloperComponent, 
+    AddDeveloperComponent,
     
   ],
   imports: [
