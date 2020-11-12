@@ -19,7 +19,6 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'login', component: LoginComponent},
   { path: 'dashboard', redirectTo: '/dashboard/committees', pathMatch: 'full'}, 
-
   // {path: '**', component: PageNotFoundComponent},
 
 ]

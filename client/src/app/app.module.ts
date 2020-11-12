@@ -20,7 +20,6 @@ import { PageNotFoundComponent } from './Main/page-not-found/page-not-found.comp
 
 import { DashboardModule } from './Dashboard/dashboard.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +36,7 @@ import { DashboardModule } from './Dashboard/dashboard.module';
     MatTooltipModule,
     HttpClientModule,
     AppRoutingModule,
-    DashboardModule
+    DashboardModule,
   ],
   providers: [CommitteeService, CreditsService, CommentsService],
   bootstrap: [AppComponent],

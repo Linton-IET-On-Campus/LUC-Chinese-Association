@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>添加委员</h2>
+    <!-- <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>成功!</strong> 资料已输入。
+        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div> -->
+    <form #committeePost="ngForm"  (ngSubmit)="onSubmit(committeePost.value)">
+      <div class="form-group" >
+        <label for="name">名字:</label>
+        <input type="text" class="form-control" id="name" placeholder="君の名字" name="name" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="position">职位:</label>
+        <input type="text" class="form-control" id="position" placeholder="君の职位" name="position" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="image">人头照:</label>
+        <input type="text" class="form-control" id="image" placeholder="君の人头照" name="image" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="headline">留言标题:</label>
+        <input type="text" class="form-control" id="headline" placeholder="君の留言标题" name="headline" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="comment">留言:</label>
+        <input type="text" class="form-control" id="comment" placeholder="君の留言" name="comment" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="whatsapp">Whatsapp:</label>
+        <input type="text" class="form-control" id="whatsapp" placeholder="君のWhatsapp" name="whatsapp" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="email">电邮:</label>
+        <input type="text" class="form-control" id="email" placeholder="君の电邮" name="email" ngModel>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class CommitteeService {
 
-  private _url: string = "/assets/data/committees.json";
+  private _url: string = "http://localhost:3000/committees";
 
   constructor(private http: HttpClient) { }
 
