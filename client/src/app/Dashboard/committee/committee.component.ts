@@ -9,12 +9,12 @@ import { CommitteeService } from './committee.service';
 export class CommitteeComponent implements OnInit {
 
 
-  public committees = [];
+  public committees:any = [];
   constructor(private _committeeService: CommitteeService) { }
 
   ngOnInit(): void {
       this._committeeService.getCommittees().subscribe((result)=>{
-        this.committees= result;
+        this.committees = result;
         console.log(this.committees)
       });
   }

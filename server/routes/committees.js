@@ -5,8 +5,8 @@ const Committee = require('../models/committee')
 // Getting all
 router.get('/', async (req, res) => {
   try {
-    const committee = await Committee.find()
-    res.json(committee)
+    const committees = await Committee.find()
+    res.json(committees)
   } catch (err) {
     res.status(500).json({ message: err.message })
   }
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 // Getting One
 router.get('/:id', getCommittee, (req, res) => {
-  res.json(res.Committee)
+  res.json(res.committee)
 })
 
 // Creating one
@@ -26,8 +26,7 @@ router.post('/', async (req, res) => {
     headline: req.body.headline,
     comment: req.body.comment,
     whatsapp: req.body.whatsapp,
-    email: req.body.email,
-
+    email: req.body.email
   })
   try {
     const newCommittee = await committee.save()
@@ -44,6 +43,21 @@ router.patch('/:id', getCommittee, async (req, res) => {
   }
   if (req.body.position != null) {
     res.committee.position = req.body.position
+  }
+  if (req.body.image != null) {
+    res.committee.image = req.body.image
+  }
+  if (req.body.headline != null) {
+    res.committee.headline = req.body.headline
+  }
+  if (req.body.comment != null) {
+    res.committee.comment = req.body.comment
+  }
+  if (req.body.whatsapp != null) {
+    res.committee.whatsapp = req.body.whatsapp
+  }
+  if (req.body.email != null) {
+    res.committee.email = req.body.email
   }
   try {
     const updatedCommittee = await res.committee.save()

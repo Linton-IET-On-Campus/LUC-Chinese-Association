@@ -26,6 +26,7 @@ export class EditCommitteeComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.router.snapshot.params.id)
     this.committee.getCurrentData(this.router.snapshot.params.id).subscribe((result)=>{
+      console.log(result);
       this.editCommittee = new FormGroup({
         name: new FormControl(result['name']),
         position: new FormControl(result['position']),
@@ -35,6 +36,7 @@ export class EditCommitteeComponent implements OnInit {
         whatsapp: new FormControl(result['whatsapp']),
         email: new FormControl(result['email'])
       })
+     
     })
   }
 

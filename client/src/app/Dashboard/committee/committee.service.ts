@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders  } from '@angular/common/http';
-import { iCommittee } from './committee';
-import { Observable } from 'rxjs';
- 
+import { HttpClient  } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +10,9 @@ export class CommitteeService {
 
   constructor(private http: HttpClient) { }
 
-  getCommittees(): Observable<iCommittee[]>{
-    return this.http.get<iCommittee[]>(this._url);
+  getCommittees(){
+    return this.http.get(this._url);
   }
-
 
   // Delete Todo
   DeleteCommittee(id) {
@@ -28,7 +24,7 @@ export class CommitteeService {
   }
 
   updateCommittee(id, data){
-    return this.http.get(`${this._url}/${id}`, data);
+    return this.http.patch(`${this._url}/${id}`, data);
   }
 
 }
