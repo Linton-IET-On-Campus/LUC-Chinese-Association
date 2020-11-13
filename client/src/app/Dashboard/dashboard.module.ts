@@ -16,6 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditDeveloperComponent } from './developer/edit-developer/edit-developer.component';
 import { AddDeveloperComponent } from './developer/add-developer/add-developer.component';
 import { EditCommentComponent } from './comments/edit-comment/edit-comment.component';
+import { NgxWebstorageModule } from 'ngx-webstorage';
+import {BrowserModule} from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { EditCommentComponent } from './comments/edit-comment/edit-comment.compo
     DashboardRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxWebstorageModule,
+    BrowserModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

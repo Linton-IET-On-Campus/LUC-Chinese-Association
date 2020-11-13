@@ -5,15 +5,10 @@
       <img class="mb-4" src="../../../assets/logo.png" alt="" width="100" height="100">
       <h1 class="h3 mb-3 font-weight-normal">登录</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="用户名" required="" autofocus="">
+      <input type="email" id="inputEmail" class="form-control" placeholder="用户名" required="" name="email"  autofocus="" [(ngModel)]="email">
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="密码" required="">
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> 记得我
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      <input type="password" id="inputPassword" class="form-control" placeholder="密码" required="" name="password" [(ngModel)]="password">
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()">登录</button>
       <p class="mt-5 mb-3 text-muted">© 2020 林登华文学会</p>
     </form>
   

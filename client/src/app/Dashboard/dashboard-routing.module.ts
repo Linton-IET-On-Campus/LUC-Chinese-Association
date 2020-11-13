@@ -31,6 +31,7 @@ const routes: Routes = [
     { path: 'comment/edit/:id', component: EditCommentComponent },
 
     { path: 'contact', component: ContactComponent },
+
   ]},
 
 ]

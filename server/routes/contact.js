@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     subject: req.body.subject,
-    description: req.body.description
+    message: req.body.message
    
   })
   try {
@@ -45,8 +45,8 @@ router.patch('/:id', getContact, async (req, res) => {
   if (req.body.subject != null) {
     res.contact.subject = req.body.subject
   }
-  if (req.body.description != null) {
-    res.contact.description = req.body.description
+  if (req.body.message != null) {
+    res.contact.message = req.body.message
   }
 
   try {

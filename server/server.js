@@ -30,6 +30,11 @@ app.use('/comments', commentsRouter)
 const contactRouter = require('./routes/contact')
 app.use('/contact', contactRouter)
 
+
+const adminRouter = require('./routes/admin')
+app.use('/admin', adminRouter)
+
+
 app.listen(PORT , () => {
     console.log(`Server is running on port: ${PORT}`);
 });
