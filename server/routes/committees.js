@@ -21,7 +21,7 @@ function verifyToken(req, res, next) {
 }
 
 // Getting all
-router.get('/', verifyToken, async (req, res) => {
+router.get('/',  async (req, res) => {
   try {
     const committees = await Committee.find()
     res.json(committees)
@@ -31,12 +31,12 @@ router.get('/', verifyToken, async (req, res) => {
 })
 
 // Getting One
-router.get('/:id', verifyToken, getCommittee, (req, res) => {
+router.get('/:id',  getCommittee, (req, res) => {
   res.json(res.committee)
 })
 
 // Creating one
-router.post('/', async (req, res) => {
+router.post('/', verifyToken, async (req, res) => {
   const committee = new Committee({
     name: req.body.name,
     position: req.body.position,
@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
 })
 
 // Updating One
-router.patch('/:id', getCommittee, async (req, res) => {
+router.patch('/:id', verifyToken, getCommittee, async (req, res) => {
   if (req.body.name != null) {
     res.committee.name = req.body.name
   }
@@ -86,7 +86,7 @@ router.patch('/:id', getCommittee, async (req, res) => {
 })
 
 // Deleting One
-router.delete('/:id', getCommittee, async (req, res) => {
+router.delete('/:id', verifyToken, getCommittee, async (req, res) => {
   try {
     await res.committee.remove()
     res.json({ message: 'Deleted committee' })

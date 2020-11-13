@@ -21,7 +21,7 @@ function verifyToken(req, res, next) {
 }
 
 // Getting all
-router.get('/', verifyToken, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const contacts = await Contact.find()
     res.json(contacts)
@@ -36,7 +36,7 @@ router.get('/:id', verifyToken, getContact, (req, res) => {
 })
 
 // Creating one
-router.post('/', async (req, res) => {
+router.post('/', verifyToken, async (req, res) => {
   const contact = new Contact({
     name: req.body.name,
     email: req.body.email,
@@ -53,7 +53,7 @@ router.post('/', async (req, res) => {
 })
 
 // Updating One
-router.patch('/:id', getContact, async (req, res) => {
+router.patch('/:id', verifyToken, getContact, async (req, res) => {
   if (req.body.name != null) {
     res.contact.name = req.body.name
   }
@@ -76,7 +76,7 @@ router.patch('/:id', getContact, async (req, res) => {
 })
 
 // Deleting One
-router.delete('/:id', getContact, async (req, res) => {
+router.delete('/:id', verifyToken, getContact, async (req, res) => {
   try {
     await res.contact.remove()
     res.json({ message: 'Deleted contact' })

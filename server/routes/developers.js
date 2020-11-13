@@ -21,7 +21,7 @@ function verifyToken(req, res, next) {
 }
 
 // Getting all
-router.get('/', verifyToken, async (req, res) => {
+router.get('/',  async (req, res) => {
   try {
     const developers = await Developer.find()
     res.json(developers)
@@ -31,12 +31,12 @@ router.get('/', verifyToken, async (req, res) => {
 })
 
 // Getting One
-router.get('/:id', verifyToken, getDeveloper, (req, res) => {
+router.get('/:id',  getDeveloper, (req, res) => {
   res.json(res.developer)
 })
 
 // Creating one
-router.post('/', async (req, res) => {
+router.post('/', verifyToken, async (req, res) => {
   const developer = new Developer({
     name: req.body.name,
     position: req.body.position,
@@ -53,7 +53,7 @@ router.post('/', async (req, res) => {
 })
 
 // Updating One
-router.patch('/:id', getDeveloper, async (req, res) => {
+router.patch('/:id', verifyToken, getDeveloper, async (req, res) => {
   if (req.body.name != null) {
     res.developer.name = req.body.name
   }
@@ -78,7 +78,7 @@ router.patch('/:id', getDeveloper, async (req, res) => {
 })
 
 // Deleting One
-router.delete('/:id', getDeveloper, async (req, res) => {
+router.delete('/:id', verifyToken, getDeveloper, async (req, res) => {
   try {
     await res.developer.remove()
     res.json({ message: 'Deleted developer' })

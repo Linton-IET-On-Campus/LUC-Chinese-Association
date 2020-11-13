@@ -21,7 +21,7 @@ function verifyToken(req, res, next) {
 }
 
 // Getting all
-router.get('/', verifyToken, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const comments = await Comment.find()
     res.json(comments)
@@ -31,12 +31,12 @@ router.get('/', verifyToken, async (req, res) => {
 })
 
 // Getting One
-router.get('/:id', verifyToken, getComment, (req, res) => {
+router.get('/:id', getComment, (req, res) => {
   res.json(res.comment)
 })
 
 // Creating one
-router.post('/', async (req, res) => {
+router.post('/', verifyToken, async (req, res) => {
   const comment = new Comment({
     name: req.body.name,
     club: req.body.club,
@@ -52,7 +52,7 @@ router.post('/', async (req, res) => {
 })
 
 // Updating One
-router.patch('/:id', getComment, async (req, res) => {
+router.patch('/:id', verifyToken, getComment, async (req, res) => {
   if (req.body.name != null) {
     res.comment.name = req.body.name
   }
@@ -72,7 +72,7 @@ router.patch('/:id', getComment, async (req, res) => {
 })
 
 // Deleting One
-router.delete('/:id', getComment, async (req, res) => {
+router.delete('/:id', verifyToken, getComment, async (req, res) => {
   try {
     await res.comment.remove()
     res.json({ message: 'Deleted comment' })
