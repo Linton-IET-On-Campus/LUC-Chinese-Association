@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
 
 /* Sections Header
 --------------------------------*/
@@ -81,8 +82,16 @@
     margin-bottom: 15px;
     text-transform: uppercase;
   }
+
+  #comments .subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'Ma Shan Zheng', cursive;
+  }
   
-  #comments .title a {
+  #comments .title{
     color: #111;
   }
   

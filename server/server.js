@@ -24,6 +24,12 @@ app.use('/committees', committeesRouter)
 const developersRouter = require('./routes/developers')
 app.use('/developers', developersRouter)
 
+const commentsRouter = require('./routes/comments')
+app.use('/comments', commentsRouter)
+
+const contactRouter = require('./routes/contact')
+app.use('/contact', contactRouter)
+
 app.listen(PORT , () => {
     console.log(`Server is running on port: ${PORT}`);
 });

@@ -11,6 +11,7 @@ import { AddDeveloperComponent } from '../Dashboard/developer/add-developer/add-
 import { EditDeveloperComponent } from '../Dashboard/developer/edit-developer/edit-developer.component';
 
 import { CommentsComponent } from '../Dashboard/comments/comments.component';
+import { EditCommentComponent } from '../Dashboard/comments/edit-comment/edit-comment.component';
 
 import { ContactComponent } from '../Dashboard/contact/contact.component';
 
@@ -27,6 +28,8 @@ const routes: Routes = [
     { path: 'developer/edit/:id', component: EditDeveloperComponent },
 
     { path: 'comments', component: CommentsComponent },
+    { path: 'comment/edit/:id', component: EditCommentComponent },
+
     { path: 'contact', component: ContactComponent },
   ]},
 

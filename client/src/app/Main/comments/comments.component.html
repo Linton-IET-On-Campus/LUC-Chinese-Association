@@ -11,52 +11,62 @@
         <h3 class="section-title">留个言呗</h3>
         <p class="section-description">人走茶凉，落得满地荒凉。痴心残忆随君逝，秋风萧瑟入君梦。愿此情，此意随风零落为泥碾，仍相记。  <br/> ✨ 留个祝福/个性签名/座右铭，做个纪念，有缘再见 <br/>✨ 任何渲染色情，暴力，政治，不道德留言将被删除</p>
       </div>
-      <div *ngFor="let comment of comments" class="row">
+
+      <div class="row">
+        <div  *ngFor="let comment of comments"  class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <h4 class="title">{{comment.name}}</h4>
+            <h5 class="subtitle">{{comment.club}}</h5>
+            <p class="description">{{comment.comment}}</p>
+          </div>
+        </div>
+
         <div class="col-lg-4 col-md-6" data-aos="zoom-in">
           <div class="box">
-            <h4 class="title"><a href="">{{comment.name}}</a></h4>
-            <p class="description">{{comment.description}}</p>
+            <h4 class="title"><a href="">点击留言</a></h4>
+           <button class="btn btn-primary" data-toggle="modal" data-target="#popUpModal"><i class="fa fa-plus"></i></button>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-            <div class="box">
-              <h4 class="title"><a href="">点击留言</a></h4>
-             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i></button>
-            </div>
-        </div>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                  </div>
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Message:</label>
-                    <textarea class="form-control" id="message-text"></textarea>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
-              </div>
-            </div>
-          </div>
-        </div>
+    
       
       </div>
 
+  
+
+    <div class="modal fade" id="popUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">📝 写个留言呗</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            <div class="modal-body">
+              <form #commentPost="ngForm"  (ngSubmit)="onSubmit(commentPost.value)">
+                <div class="form-group">
+                  <label for="name" class="col-form-label">你的名字:</label>
+                  <input type="text" class="form-control" id="name" name="name" ngModel>
+                </div>
+                <div class="form-group">
+                  <label for="club" class="col-form-label">所属大专/学院/华团/社团:</label>
+                  <input type="text" class="form-control" id="club" name="club" ngModel>
+                </div>
+                <div class="form-group">
+                  <label for="comment" class="col-form-label">你的留言:</label>
+                  <textarea class="form-control" id="comment"  name="comment" ngModel></textarea>
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary">提交</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
     </div>
   </section><!-- End comments Section -->
 

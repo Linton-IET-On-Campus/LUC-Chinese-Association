@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditDeveloperComponent } from './developer/edit-developer/edit-developer.component';
 import { AddDeveloperComponent } from './developer/add-developer/add-developer.component';
+import { EditCommentComponent } from './comments/edit-comment/edit-comment.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { AddDeveloperComponent } from './developer/add-developer/add-developer.c
     EditCommitteeComponent, 
     AddCommitteeComponent, 
     EditDeveloperComponent, 
-    AddDeveloperComponent,
+    AddDeveloperComponent, EditCommentComponent,
     
   ],
   imports: [

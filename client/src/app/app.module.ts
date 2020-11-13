@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 
+import { FormsModule } from '@angular/forms';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './Main/navbar/navbar.component';
 import { HeaderComponent } from './Main/header/header.component';
@@ -36,6 +39,8 @@ import { DashboardModule } from './Dashboard/dashboard.module';
     HttpClientModule,
     AppRoutingModule,
     DashboardModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [CommitteeService, CreditsService, CommentsService],
   bootstrap: [AppComponent],

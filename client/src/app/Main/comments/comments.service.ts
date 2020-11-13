@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class CommentsService {
 
-  private _url: string = "/assets/data/comments.json";
+  private _url: string = "http://localhost:3000/comments";
 
   constructor(private http: HttpClient) { }
 
-  getComments(): Observable<iComments[]>{
-    return this.http.get<iComments[]>(this._url);
+  getComments(){
+    return this.http.get(this._url);
   }
 
 }
