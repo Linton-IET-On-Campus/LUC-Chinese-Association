@@ -1,9 +1,27 @@
 const express = require('express')
 const router = express.Router()
 const Comment = require('../models/comment')
+const jwt = require('jsonwebtoken')
+
+
+function verifyToken(req, res, next) {
+  if(!req.headers.authorization) {
+    return res.status(401).send('Unauthorized request')
+  }
+  let token = req.headers.authorization.split(' ')[1]
+  if(token === 'null') {
+    return res.status(401).send('Unauthorized request')    
+  }
+  let payload = jwt.verify(token, 'secretKey')
+  if(!payload) {
+    return res.status(401).send('Unauthorized request')    
+  }
+  req.userId = payload.subject
+  next()
+}
 
 // Getting all
-router.get('/', async (req, res) => {
+router.get('/', verifyToken, async (req, res) => {
   try {
     const comments = await Comment.find()
     res.json(comments)
@@ -13,7 +31,7 @@ router.get('/', async (req, res) => {
 })
 
 // Getting One
-router.get('/:id', getComment, (req, res) => {
+router.get('/:id', verifyToken, getComment, (req, res) => {
   res.json(res.comment)
 })
 

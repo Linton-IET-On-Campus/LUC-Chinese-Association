@@ -1,78 +1,53 @@
 const express = require('express')
 const router = express.Router()
-const Admin = require('../models/admin')
+const User = require('../models/admin')
+const jwt = require('jsonwebtoken')
 
 // Getting all
 router.get('/', async (req, res) => {
   try {
-    const admins = await Admin.find()
-    res.json(admins)
+    const users = await User.find()
+    res.json(users)
   } catch (err) {
     res.status(500).json({ message: err.message })
   }
 })
 
-// Getting One
-router.get('/:id', getAdmin, (req, res) => {
-  res.json(res.admin)
-})
-
-// Creating one
-router.post('/', async (req, res) => {
-  const admin = new Admin({
-    email: req.body.email,
-    password: req.body.password
-  })
-  try {
-    const newAdmin = await admin.save()
-    res.status(201).json(newAdmin)
-  } catch (err) {
-    res.status(400).json({ message: err.message })
-  }
-})
-
-
-
-// Updating One
-router.patch('/:id', getAdmin, async (req, res) => {
-  if (req.body.email != null) {
-    res.admin.email = req.body.email
-  }
-  if (req.body.password != null) {
-    res.admin.password = req.body.password
-  }
- 
-  try {
-    const updatedAdmin = await res.admin.save()
-    res.json(updatedAdmin)
-  } catch (err) {
-    res.status(400).json({ message: err.message })
-  }
-})
-
-// Deleting One
-router.delete('/:id', getAdmin, async (req, res) => {
-  try {
-    await res.admin.remove()
-    res.json({ message: 'Deleted admin' })
-  } catch (err) {
-    res.status(500).json({ message: err.message })
-  }
-})
-
-async function getAdmin(req, res, next) {
-  let admin
-  try {
-    admin = await Admin.findById(req.params.id)
-    if (admin == null) {
-      return res.status(404).json({ message: 'Cannot find admin' })
+router.post('/register', (req, res) => {
+  let userData = req.body
+  let user = new User(userData)
+  user.save((err, registeredUser) => {
+    if (err) {
+      console.log(err)      
+    } else {
+      let payload = {subject: registeredUser._id}
+      let token = jwt.sign(payload, 'secretKey')
+      res.status(200).send({token})
     }
-  } catch (err) {
-    return res.status(500).json({ message: err.message })
-  }
+  })
+})
 
-  res.admin = admin
-  next()
-}
+router.post('/login', (req, res) => {
+  let userData = req.body
+  User.findOne({email: userData.email}, (err, user) => {
+    if (err) {
+      console.log(err)    
+    } else {
+      if (!user) {
+        res.status(401).send('Invalid Email')
+      } else 
+      if ( user.password !== userData.password) {
+        res.status(401).send('Invalid Password')
+      } else {
+        let payload = {subject: user._id}
+        let token = jwt.sign(payload, 'secretKey')
+        res.status(200).send({token})
+      }
+    }
+  })
+})
+
+
+
 
 module.exports = router

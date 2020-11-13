@@ -1,19 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient  } from '@angular/common/http';
+import { Router } from '@angular/router'
 
 @Injectable()
 export class AuthService {
 
-  constructor(private http:HttpClient) { }
+  private _loginUrl = "http://localhost:3000/admin/login";
 
-  getAuthToken(email, password){
-    return this.http.post('http://localhost:3000/admin', {"email": email, "password": password})
-    .toPromise()
-    .then(function(res){
-      return ((res: Response) => res.json())
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
+  constructor(private http:HttpClient, private _router: Router) { }
+
+  loginUser(user) {
+    return this.http.post<any>(this._loginUrl, user)
   }
+
+  logoutUser() {
+    localStorage.removeItem('token')
+    this._router.navigate(['/login'])
+  }
+
+  getToken() {
+    return localStorage.getItem('token')
+  }
+
+  loggedIn() {
+    return !!localStorage.getItem('token')    
+  }
+
 }

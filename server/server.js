@@ -18,6 +18,8 @@ db.once('open', () => console.log('Connected to Database'))
 
 app.use(express.json())
 
+
+
 const committeesRouter = require('./routes/committees')
 app.use('/committees', committeesRouter)
 

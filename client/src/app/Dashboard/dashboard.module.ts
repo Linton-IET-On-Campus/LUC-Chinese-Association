@@ -9,15 +9,15 @@ import { DeveloperComponent } from './developer/developer.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { EditCommitteeComponent } from './committee/edit-committee/edit-committee.component';
 import { AddCommitteeComponent } from './committee/add-committee/add-committee.component';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';  
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditDeveloperComponent } from './developer/edit-developer/edit-developer.component';
 import { AddDeveloperComponent } from './developer/add-developer/add-developer.component';
 import { EditCommentComponent } from './comments/edit-comment/edit-comment.component';
-import { NgxWebstorageModule } from 'ngx-webstorage';
+// import { NgxWebstorageModule } from 'ngx-webstorage';
 import {BrowserModule} from '@angular/platform-browser';
+
 
 @NgModule({
   declarations: [
@@ -31,18 +31,19 @@ import {BrowserModule} from '@angular/platform-browser';
     EditCommitteeComponent, 
     AddCommitteeComponent, 
     EditDeveloperComponent, 
-    AddDeveloperComponent, EditCommentComponent,
+    AddDeveloperComponent, 
+    EditCommentComponent,
     
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxWebstorageModule,
+    // NgxWebstorageModule,
     BrowserModule
   ],
+
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 
 })

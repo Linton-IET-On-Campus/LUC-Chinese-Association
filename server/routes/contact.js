@@ -1,9 +1,27 @@
 const express = require('express')
 const router = express.Router()
 const Contact = require('../models/contact')
+const jwt = require('jsonwebtoken')
+
+
+function verifyToken(req, res, next) {
+  if(!req.headers.authorization) {
+    return res.status(401).send('Unauthorized request')
+  }
+  let token = req.headers.authorization.split(' ')[1]
+  if(token === 'null') {
+    return res.status(401).send('Unauthorized request')    
+  }
+  let payload = jwt.verify(token, 'secretKey')
+  if(!payload) {
+    return res.status(401).send('Unauthorized request')    
+  }
+  req.userId = payload.subject
+  next()
+}
 
 // Getting all
-router.get('/', async (req, res) => {
+router.get('/', verifyToken, async (req, res) => {
   try {
     const contacts = await Contact.find()
     res.json(contacts)
@@ -13,7 +31,7 @@ router.get('/', async (req, res) => {
 })
 
 // Getting One
-router.get('/:id', getContact, (req, res) => {
+router.get('/:id', verifyToken, getContact, (req, res) => {
   res.json(res.contact)
 })
 

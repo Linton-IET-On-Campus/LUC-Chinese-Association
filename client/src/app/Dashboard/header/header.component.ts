@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LocalStorageService } from 'ngx-webstorage';
+import { AuthService } from '../../Auth/login/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,7 @@ import { LocalStorageService } from 'ngx-webstorage';
 export class HeaderComponent implements OnInit {
 
   // constructor(private localStorageService: LocalStorageService, private router:Router) { }
-  constructor( private router:Router) { }
+  constructor( private router:Router, private _authService: AuthService) { }
 
   ngOnInit(): void {
   }

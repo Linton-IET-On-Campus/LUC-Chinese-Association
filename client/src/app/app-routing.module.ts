@@ -9,6 +9,7 @@ import { CreditsComponent } from './Main/credits/credits.component';
 import { ContactComponent } from './Main/contact/contact.component';
 import { PageNotFoundComponent } from './Main/page-not-found/page-not-found.component';
 import { LoginComponent } from './Auth/login/login.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/about', pathMatch: 'full'},
@@ -18,9 +19,8 @@ const routes: Routes = [
   {path: 'credits', component: CreditsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'login', component: LoginComponent},
-  { path: 'dashboard', redirectTo: '/dashboard/committees', pathMatch: 'full'}, 
+  { path: 'dashboard', redirectTo: '/dashboard/committees', pathMatch: 'full', canActivate: [AuthGuard]}, 
   // {path: '**', component: PageNotFoundComponent},
-
 ]
 
 @NgModule({
@@ -29,7 +29,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
 export const routingComponents = [JumbotronComponent, CommitteeComponent, CommentsComponent, CreditsComponent, ContactComponent, LoginComponent, PageNotFoundComponent]
