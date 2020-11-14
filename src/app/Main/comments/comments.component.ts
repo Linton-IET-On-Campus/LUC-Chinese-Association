@@ -20,7 +20,7 @@ export class CommentsComponent implements OnInit {
   }
 
   onSubmit(data){
-    this.http.post('https://luc-chinese-association.herokuapp.com/comments', data)
+    this.http.post('https://luc-chinese-association.herokuapp.com/api/comments', data)
     .subscribe((result)=>{
       console.warn("result", result);
       alert("🎉 谢谢您的留言！");

@@ -14,7 +14,7 @@ export class AddCommitteeComponent  {
   constructor(private http:HttpClient, private router: Router) { }
 
   onSubmit(data){
-    this.http.post('https://luc-chinese-association.herokuapp.com/committees', data)
+    this.http.post('https://luc-chinese-association.herokuapp.com/api/committees', data)
     .subscribe((result)=>{
       console.warn("result", result);
       this.router.navigate(['/dashboard']);

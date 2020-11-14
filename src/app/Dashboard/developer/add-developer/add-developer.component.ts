@@ -12,7 +12,7 @@ export class AddDeveloperComponent{
   constructor(private http:HttpClient, private router: Router) { }
 
   onSubmit(data){
-    this.http.post('https://luc-chinese-association.herokuapp.com/developers', data)
+    this.http.post('https://luc-chinese-association.herokuapp.com/api/developers', data)
     .subscribe((result)=>{
       console.warn("result", result);
       this.router.navigate(['/dashboard/developers']);

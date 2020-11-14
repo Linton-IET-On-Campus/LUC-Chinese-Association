@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CommentsService {
 
-  private _url: string = "https://luc-chinese-association.herokuapp.com/comments";
+  private _url: string = "https://luc-chinese-association.herokuapp.com/api/comments";
 
   constructor(private http: HttpClient) { }
 

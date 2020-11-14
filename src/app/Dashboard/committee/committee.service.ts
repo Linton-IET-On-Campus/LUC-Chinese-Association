@@ -6,7 +6,7 @@ import { HttpClient  } from '@angular/common/http';
 })
 export class CommitteeService {
 
-   _url: string = "https://luc-chinese-association.herokuapp.com/committees";
+   _url: string = "https://luc-chinese-association.herokuapp.com/api/committees";
 
   constructor(private http: HttpClient) { }
 

@@ -5,7 +5,7 @@ import { Router } from '@angular/router'
 @Injectable()
 export class AuthService {
 
-  private _loginUrl = "https://luc-chinese-association.herokuapp.com/admin/login";
+  private _loginUrl = "https://luc-chinese-association.herokuapp.com/api/admin/login";
 
   constructor(private http:HttpClient, private _router: Router) { }
 

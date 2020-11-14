@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(data){
-    this.http.post('http://localhost:3000/contact', data)
+    this.http.post('https://luc-chinese-association.herokuapp.com/api/contact', data)
     .subscribe((result)=>{
       console.warn("result", result);
       alert("🎉 信息已发，谢谢您的信息！");

@@ -6,7 +6,7 @@ import { HttpClient  } from '@angular/common/http';
 })
 export class ContactService {
 
-  _url: string = "https://luc-chinese-association.herokuapp.com/contact";
+  _url: string = "https://luc-chinese-association.herokuapp.com/api/contact";
 
   constructor(private http: HttpClient) { }
 

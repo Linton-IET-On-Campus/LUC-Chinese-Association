@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class CommitteeService {
 
-  private _url: string = "https://luc-chinese-association.herokuapp.com/committees";
+  private _url: string = "https://luc-chinese-association.herokuapp.com/api/committees";
 
   constructor(private http: HttpClient) { }
 

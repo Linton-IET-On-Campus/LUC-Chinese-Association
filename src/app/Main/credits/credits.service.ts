@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CreditsService {
 
-  private _url: string = "https://luc-chinese-association.herokuapp.com/developers";
+  private _url: string = "https://luc-chinese-association.herokuapp.com/api/developers";
 
   constructor(private http: HttpClient) { }
 
