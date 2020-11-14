@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
 })
 
 // Getting One
-router.get('/:id', verifyToken, getContact, (req, res) => {
+router.get('/:id', getContact, (req, res) => {
   res.json(res.contact)
 })
 
