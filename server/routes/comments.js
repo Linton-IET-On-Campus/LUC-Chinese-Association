@@ -36,7 +36,7 @@ router.get('/:id', getComment, (req, res) => {
 })
 
 // Creating one
-router.post('/', verifyToken, async (req, res) => {
+router.post('/',  async (req, res) => {
   const comment = new Comment({
     name: req.body.name,
     club: req.body.club,
@@ -52,7 +52,7 @@ router.post('/', verifyToken, async (req, res) => {
 })
 
 // Updating One
-router.patch('/:id', verifyToken, getComment, async (req, res) => {
+router.patch('/:id', getComment, async (req, res) => {
   if (req.body.name != null) {
     res.comment.name = req.body.name
   }
