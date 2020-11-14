@@ -36,7 +36,7 @@ router.get('/:id', verifyToken, getContact, (req, res) => {
 })
 
 // Creating one
-router.post('/', verifyToken, async (req, res) => {
+router.post('/', async (req, res) => {
   const contact = new Contact({
     name: req.body.name,
     email: req.body.email,
