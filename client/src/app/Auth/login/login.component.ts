@@ -9,9 +9,9 @@ import { AuthService } from './auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginUserData = {}
+  loginUserData:any = {}
 
-  constructor(private _auth: AuthService, private _router: Router) { }
+  constructor(public _auth: AuthService, private _router: Router) { }
 
   ngOnInit() {
   }
